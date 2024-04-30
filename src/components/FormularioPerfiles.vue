@@ -63,7 +63,7 @@ export default {
     methods: {
         guardar() {
             axios
-                .post("http://localhost:8080/api/perfiles", {
+                .post("https://greenlight-production.up.railway.app/api/perfiles", {
                     nombre: this.nombre,
                     password: this.password,
                     email: this.email,
@@ -92,7 +92,7 @@ export default {
 
         consultar() {
             axios
-                .get("http://localhost:8080/api/perfiles/"+this.email)
+                .get("https://greenlight-production.up.railway.app/api/perfiles/"+this.email)
                 .then((response) => {
                     //Actualizar los campos del formulario con los datos del estudiante consultado
                     this.nombre = response.data.nombre;
@@ -111,7 +111,7 @@ export default {
 
         actualizar() {
             axios
-                .put("http://localhost:8080/api/perfiles/actualizar/"+this.email, {
+                .put("https://greenlight-production.up.railway.app/api/perfiles/actualizar/"+this.email, {
                     nombre: this.nombre,
                     password: this.password,
                     email: this.email,
@@ -133,7 +133,7 @@ export default {
 
         eliminar() {
             axios
-                .delete("http://localhost:8080/api/perfiles/"+this.email)
+                .delete("https://greenlight-production.up.railway.app/api/perfiles/"+this.email)
                 .then(() => {
                     console.log("Usuario eliminado con éxito");
                     alert("Usuario eliminado con éxito");

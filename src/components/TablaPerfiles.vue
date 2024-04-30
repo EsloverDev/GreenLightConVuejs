@@ -38,7 +38,7 @@ export default {
     methods: {
         obtenerPerfiles(){
             //Método para obtener la lista de todos los perfiles
-            axios.get("http://localhost:8080/api/perfiles/listar")
+            axios.get("https://greenlight-production.up.railway.app/api/perfiles/listar")
             .then((Response) => {
                 this.perfiles = Response.data;
             })
